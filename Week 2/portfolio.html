@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      
+        <img src="1.jpg" alt="Logo" class="nav__logo-img" />
+      
+
+      <ul class="nav__list">
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#media" class="nav__link">Media</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" class="section home">
+      <div class="container">
+        <h1 class="home__title">Sayyed Muhammad <span class="highlight">Areeb</span><br></h1>
+        <p class="home__desc">I am a passionate software engineer with a strong foundation in design, cross-platform app development, and UI/UX. I’ve worked on multiple projects, focusing on both branding and development. I love creating innovative solutions using JavaScript, MERN, and design tools like Figma and Adobe XD.</p>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section__title">Project Experience</h2>
+        <div class="projects__grid">
+          <div class="project">
+            <h3 class="project__title">Safar - Metro Transit Application</h3>
+            <p class="project__desc">A user-focused travel app built with strong UI/UX principles, API integration, and data analytics.</p>
+            <ul>
+              <li>Designed in Figma & Adobe Illustrator</li>
+              <li>Integrated 5 APIs for seamless experience</li>
+            </ul>
+          </div>
+
+          <div class="project">
+            <h3 class="project__title">Food Ordering Web App (MEAN Stack)</h3>
+            <p class="project__desc">A fast and intuitive online ordering platform built using modern web technologies.</p>
+          </div>
+
+          <div class="project">
+            <h3 class="project__title">Pokédex (React Native)</h3>
+            <p class="project__desc">An interactive Pokémon mobile app for enthusiasts to manage collections and teams.</p>
+          </div>
+
+          <div class="project">
+            <h3 class="project__title">E-commerce App</h3>
+            <p class="project__desc">Built with HTML/CSS/JS, includes an AI chatbot trained using TensorFlow.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <h2 class="section__title">UI Examples</h2>
+    <p class="home__desc">Here are some screens from Safar App:</p>
+    <section class="section">
+    
+    <div class="carousel">
+      <div class="carousel__track">
+        <img src="home-page.png" alt="Safar App Mockup 1" />
+        <img src="parent.png" alt="Safar App Mockup 2" />
+        <img src="ticket-page.png" alt="Safar App Mockup 3" />
+        <img src="payment-page.png" alt="Safar App Mockup 4" />
+      </div>
+    </div>
+</section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section__title">Skills Table</h2>
+        <table class="skills__table">
+          <thead>
+            <tr><th>Category</th><th>Skills</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Languages</td><td>Java, JavaScript, HTML, CSS</td></tr>
+            <tr><td>Frameworks</td><td>MERN, React Native, Flutter</td></tr>
+            <tr><td>Design Tools</td><td>Figma, Illustrator, Photoshop</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="media" class="section">
+      <div class="container">
+        <h2 class="titles">Featured Media</h2>
+        <p>Here is a video presentation of one of my recent projects:</p>
+        <div class="media__video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Rfa7cKYXIiU" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section__title">Contact Me</h2>
+        <form class="contact__form">
+          <input class="contact__input" type="text" name="name" placeholder="Name" required />
+          <input class="contact__input" type="email" name="email" placeholder="Email" required />
+          <textarea class="contact__input" name="message" rows="5" placeholder="Message" required></textarea>
+          <button type="submit" class="button">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__title">Sayyed Areeb Bukhari</p>
+      <div class="footer__social">
+        <a href="mailto:libra.areeb@gmail.com" class="footer__icon">Email</a>
+        <a href="https://www.linkedin.com/in/areeb-bukhari-b2b66a27b/" class="footer__icon" target="_blank">LinkedIn</a>
+      </div>
+      <p class="footer__copy">&copy; 2025 Sayyed Areeb. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
