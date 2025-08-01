@@ -1,44 +1,39 @@
-document.getElementById("calcForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-  let num1 = document.getElementById("num1").value;
-  let num2 = document.getElementById("num2").value;
-  const operation = document.getElementById("operation").value;
-  const resultDisplay = document.getElementById("result");
+let expression = "";
 
-  let number1 = parseFloat(num1);
-  let number2 = parseFloat(num2);
+const display = document.getElementById("display");
+const resultDisplay = document.getElementById("result");
+const buttons = document.querySelectorAll(".buttons button");
+const calculateBtn = document.getElementById("calculate");
+const clearBtn = document.getElementById("clear");
 
-  if (isNaN(number1) || isNaN(number2)) {
-    resultDisplay.textContent = "Please enter valid numbers.";
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const value = button.textContent;
+
+    if (value === "C") return;
+
+    expression += value;
+    display.value = expression;
+    resultDisplay.textContent = "";
+  });
+});
+
+clearBtn.addEventListener("click", () => {
+  expression = "";
+  display.value = "";
+  resultDisplay.textContent = "";
+});
+
+calculateBtn.addEventListener("click", () => {
+  if (expression.trim() === "") {
+    resultDisplay.textContent = "Enter an expression.";
     return;
   }
 
-  if (!operation) {
-    resultDisplay.textContent = "Please select an operation.";
-    return;
+  try {
+    const result = eval(expression);
+    resultDisplay.textContent = `Answer: ${result}`;
+  } catch (err) {
+    resultDisplay.textContent = "Invalid expression.";
   }
-
-  let result;
-
-  switch (operation) {
-    case "add":
-      result = number1 + number2;
-      break;
-    case "sub":
-      result = number1 - number2;
-      break;
-    case "mul":
-      result = number1 * number2;
-      break;
-    case "div":
-      if (number2 === 0) {
-        resultDisplay.textContent = "Cannot divide by zero.";
-        return;
-      }
-      result = number1 / number2; 
-      break;
-    default:
-      result = "Invalid operation.";
-  }
-  resultDisplay.textContent = `Result: ${result}`;
 });

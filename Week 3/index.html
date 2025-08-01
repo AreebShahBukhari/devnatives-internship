@@ -9,21 +9,37 @@
 <body>
   <div class="calculator">
     <h2>Calculator</h2>
-    <form id="calcForm">
-      <input type="text" id="num1" placeholder="Enter first number" />
-      <input type="text" id="num2" placeholder="Enter second number" />
 
-      <select id="operation">
-        <option value="">Choose Operation</option>
-        <option value="add">Addition (+)</option>
-        <option value="sub">Subtraction (-)</option>
-        <option value="mul">Multiplication (×)</option>
-        <option value="div">Division (÷)</option>
-      </select>
+    <!-- Display -->
+    <input type="text" id="display" readonly placeholder="0" />
 
-      <button type="submit">Calculate</button>
-      <p id="result"></p>
-    </form>
+    <!-- Buttons Grid -->
+    <div class="buttons">
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button>/</button>
+
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>*</button>
+
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>-</button>
+
+      <button class="span-two">0</button>
+      <button id="clear">C</button>
+      <button>+</button>
+    </div>
+
+    <!-- Result -->
+    <p id="result"></p>
+
+    <!-- Calculate Button -->
+    <button id="calculate" class="calculate-btn">Calculate</button>
   </div>
 
   <script src="script.js"></script>

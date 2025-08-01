@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/232bc4517e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="weather-card">
+      <div class="search">
+        <input type="text" id="cityInput" placeholder="Enter city" autocorrect="off"/>
+        <button onclick="getWeather()"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="weather-info" id="weatherInfo">
+        <div class="icon" id="weatherIcon"></div>
+        <div class="temp" id="temperature">--°C</div>
+        <div class="location" id="location">City</div>
+        <div class="details">
+          <div class="weather-detail">
+            <i class="fa-solid fa-tint"></i>
+            <div class="detail-text">
+              <div id="humidity">--%</div>
+              <div>Humidity</div>
+            </div>
+          </div>
+          <div class="weather-detail">
+            <i class="fa-solid fa-wind"></i>
+            <div class="detail-text">
+              <div id="wind">-- km/h</div>
+              <div>Wind</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="comment-section">
+      <h2>Leave a Comment</h2>
+      <form id="commentForm">
+        <input type="text" id="name" placeholder="Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <textarea id="message" placeholder="Your comment..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="commentsList"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

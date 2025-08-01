@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif
+}
+
+body {
+  background: linear-gradient(to right, #39b2bd, #6f65cc);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+}
+
+.weather-card {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.location {
+  font-size: 30px;
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.search input {
+  flex: 1 1 200px;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.search button {
+  background: white;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.weather-info .temp {
+  font-size: 2.8rem;
+  margin: 10px 0;
+}
+
+.weather-info .icon {
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.weather-info .details {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+#weatherIcon img {
+  width: 200px;
+  height: 100px;
+  object-fit: contain;
+}
+
+
+.comment-section {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  width: 100%;
+}
+
+.comment-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#commentForm input,
+#commentForm textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+#commentForm textarea {
+  resize: none;
+  height: 80px;
+}
+
+#commentForm button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#commentsList {
+  margin-top: 20px;
+}
+
+#commentsList div {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+@media (max-width: 480px) {
+  .search {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .search input,
+  .search button {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .weather-info .temp {
+    font-size: 2.2rem;
+  }
+
+  .weather-info .details {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #commentForm input,
+  #commentForm textarea,
+  #commentForm button {
+    font-size: 0.95rem;
+  }
+}
+.weather-detail {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  flex: 1;
+}
+
+.weather-detail i {
+  font-size: 32px;
+  color: white;
+}
+
+.detail-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  font-size: 16px;
+  text-align: left;
+}
+
+@media (max-width: 480px) {
+  .details {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .weather-detail {
+    justify-content: flex-start;
+  }
+}

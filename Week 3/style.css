@@ -62,7 +62,7 @@ button:hover {
 } */
 
 
-button {
+/* button {
   background: linear-gradient(to right, #b863b8, #5343ae);
   background-size: 200% 100%;
   background-position: left center;
@@ -76,13 +76,79 @@ button {
 
 button:hover {
   background-position: right center;
-}
+} */
 
 
 
-#result {
+/* #result {
   font-weight: bold;
   font-size: 1.2em;
   color: #00ff88;
   margin-top: 15px;
+} */
+
+
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Style each button */
+button {
+  font-size: 1.2em;
+  padding: 15px;
+  border-radius: 8px;
+  background: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #444;
+}
+
+/* Make '0' span two columns */
+.span-two {
+  grid-column: span 2;
+}
+
+/* Display styling */
+#display {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.5em;
+  text-align: right;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #2c2c2c;
+  color: #fff;
+}
+
+/* Result styling */
+#result {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #b863b8;
+  margin-top: 15px;
+  text-align: right;
+}
+
+/* Calculate Button full width */
+.calculate-btn {
+  width: 100%;
+  margin-top: 15px;
+  background: linear-gradient(to right, #b863b8, #5343ae);
+  background-size: 200% 100%;
+  background-position: left center;
+  transition: background-position 0.5s ease;
+}
+
+.calculate-btn:hover {
+  background-position: right center;
 }
