@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherNow - Weather Forecast</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="top-bar">
+        <div class="top-bar-content">
+            <span>For Business</span>
+            <span>|</span>
+            <span>Warnings</span>
+            <span>Forensics</span>
+            <span>Advertising</span>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-overlay">
+            <div class="search-container-hero">
+                <input type="text" id="searchInput" class="search-box-hero" placeholder="Search City">
+                <button class="location-btn" onclick="searchWeather()">
+                    Search <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <main class="main-content">
+        <div class="container">
+            <div class="weather-filters">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" onclick="setActiveFilter('current')">Current</button>
+                    <button class="filter-tab" onclick="setActiveFilter('daily')">Daily</button>
+                    <button class="filter-tab" onclick="setActiveFilter('weekly')">7-Day</button>
+                    <button class="filter-tab" onclick="setActiveFilter('monthly')">Monthly</button>
+                </div>
+            </div>
+
+            <div class="current-weather" id="currentWeather">
+                <div class="loading">
+                    <i class="fas fa-spinner"></i>
+                    <p>Loading weather data...</p>
+                </div>
+            </div>
+
+            <div class="forecast-section" id="forecastSection" style="display: none;">
+                <h2 class="forecast-title" id="forecastTitle">7-Day Forecast</h2>
+                <div class="forecast-grid" id="forecastGrid"></div>
+            </div>
+
+            <div class="extreme-weather" id="extremeWeather" style="display: none;">
+                <div class="extreme-card">
+                    <h3 class="extreme-title hot">
+                        <i class="fas fa-thermometer-full"></i>
+                        Hottest Cities Today
+                    </h3>
+                    <div id="hottestCities">
+                        <div class="loading">
+                            <i class="fas fa-spinner"></i>
+                            <p>Loading data...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="extreme-card">
+                    <h3 class="extreme-title cold">
+                        <i class="fas fa-thermometer-empty"></i>
+                        Coldest Cities Today
+                    </h3>
+                    <div id="coldestCities">
+                        <div class="loading">
+                            <i class="fas fa-spinner"></i>
+                            <p>Loading data...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>COMPANY</h4>
+                <p>Proven Superior Accuracy™</p>
+                <p>About AccuWeather</p>
+                <p>Digital Advertising</p>
+                <p>Careers</p>
+                <p>Press</p>
+                <p>Contact Us</p>
+                <div class="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>PRODUCTS & SERVICES</h4>
+                <p>For Business</p>
+                <p>For Partners</p>
+                <p>For Advertising</p>
+                <p>AccuWeather APIs</p>
+                <p>AccuWeather Connect</p>
+                <p>RealFeel™ and RealFeel Shade™</p>
+                <p>Personal Weather Stations</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>APPS & DOWNLOADS</h4>
+                <p>iPhone App</p>
+                <p>Android App</p>
+                <p>See all Apps & Downloads</p>
+                <h4>SUBSCRIPTION SERVICES</h4>
+                <p>AccuWeather Premium</p>
+                <p>AccuWeather Professional</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>MORE</h4>
+                <p>AccuWeather Ready</p>
+                <p>Business</p>
+                <p>Health</p>
+                <p>Hurricane</p>
+                <p>Leisure and Recreation</p>
+                <p>Severe Weather</p>
+                <p>Space and Astronomy</p>
+                <p>Sports</p>
+                <p>Travel</p>
+                <p>Weather News</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
